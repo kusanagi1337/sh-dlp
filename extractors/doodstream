@@ -6,8 +6,8 @@
 agent="Mozilla/5.0 (Linux; Android 11; moto g(9) power) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Mobile Safari/537.36"
 
 ##id extraction from arguments
-dood_id=$(printf "$*" | sed -nE "s_.*dood.*/[e|d]/([^?]*).*_\1_p")
-dood_link="https://dood.ws"
+dood_id=$(printf "$*" | sed -nE "s_.*(dood|d000d).*/[e|d]/([^?]*).*_\2_p")
+dood_link="https://d000d.com"
 
 
 [ -z "$dood_id" ] && printf "\033[1;31m[ doodstream ] Invalid link\n" && exit 1
